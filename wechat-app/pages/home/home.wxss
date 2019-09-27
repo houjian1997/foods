@@ -1,0 +1,8 @@
+/* pages/home/home.wxss */
+.swiper-view{
+    width:100%
+}
+
+.swiper{
+    width:100%
+}
