@@ -1,0 +1,78 @@
+/* components/item/item.wxss */
+.img-view{
+    width:100%;
+}
+
+.img-view .big-img{
+    width:100%;
+}
+
+.tags{
+    margin-bottom:20rpx;
+    padding-left:10rpx;
+    box-sizing:border-box;
+}
+
+.tags-view{
+    width:750rpx;
+    padding:0 30rpx;
+    box-sizing:border-box;
+    font-size:28rpx;
+}
+
+.ingredients{
+    margin-bottom:20rpx;
+    padding-left:10rpx;
+    box-sizing:border-box;
+}
+
+.ingredients-view{
+    width:750rpx;
+    padding:0 30rpx;
+    box-sizing:border-box;
+    font-size:28rpx;
+}
+
+.burden{
+    margin-bottom:20rpx;
+    padding-left:10rpx;
+    box-sizing:border-box;
+}
+
+.burden-view{
+    width:750rpx;
+    padding:0 30rpx;
+    box-sizing:border-box;
+    font-size:28rpx;
+}
+
+.steps{
+    padding-left:10rpx;
+    box-sizing:border-box;
+    margin-bottom:100rpx;
+}
+
+.steps-view{
+    width:100%;
+    padding:10rpx 20rpx 0 10rpx;
+    box-sizing:border-box;
+}
+
+.steps-img{
+    width:710rpx;
+    margin:0 auto;
+    border-radius:2%;
+}
+
+.btn-view{
+    position:fixed;
+    width:90%;
+    margin:0 auto;
+    bottom:0;
+    left:0;
+}
+
+.btn{
+    width:100%;
+    margin-left:30rpx;
+}

@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "List":"/components/list/list"
+  },
   "navigationBarTextStyle": "white",
   "navigationBarTitleText": "首页",
   "backgroundColor": "#eeeeee",
