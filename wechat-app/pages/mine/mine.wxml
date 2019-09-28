@@ -1,2 +1,40 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+
+<view wx:if="{{modalHidden}}"  >
+    <view>
+      <view class="title"> 愿每一餐都有美味也有你！</view>
+      <view class="msg"> 没有什么比吃好饭更重要</view>
+      <view class="msg">开启美食生活</view>
+      <view class="msg">记录你想吃的, 爱吃的一切</view>
+
+    </view>
+    <view>
+      <image class="sinin" src="../../images/sinin.213f30.png"></image>
+    </view>
+    <view>
+     
+    </view>
+</view>
+    <view class='box' wx:else="{{!modalHidden}}" >
+        <view class="collection">收藏菜肴 : </view>
+          
+          <block wx:for="{{textList}}">
+            <view class='text-item'>
+              <view class='text-name'>{{item.title}}</view>
+              <view class='text-desc' style="{{item.upStatus?'':'display:-webkit-box'}}">{{item.description}}</view>
+              <view class='text-bottom'>
+                <view class='text-btn' data-index="{{index}}" bindtap='upDown'>                 
+                  <text>{{!item.upStatus?'展开':'收起'}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+<view wx:if="{{!gologin}}">
+
+      
+
+        <import src="/tpls/login.wxml"/>
+        <template is="login" data="{{...loginData}}"></template>
+
+
+</view>

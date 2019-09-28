@@ -2,9 +2,10 @@
   "pages": [
     "pages/home/home",
     "pages/index/index",
+    "pages/mine/mine",
     "pages/logs/logs",
-    "pages/classify/classify",
-    "pages/mine/mine"
+    "pages/classify/classify"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
