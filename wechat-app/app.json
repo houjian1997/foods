@@ -4,15 +4,7 @@
     "pages/index/index",
     "pages/mine/mine",
     "pages/logs/logs",
-<<<<<<< HEAD
     "pages/classify/classify"
-
-=======
-    "pages/classify/classify",
-    "pages/mine/mine",
-    "pages/detail/detail",
-    "pages/cookbooks/cookbooks"
->>>>>>> cf86e0d407ed12be5cf8bc1c86e8df4f12fe7bcb
   ],
   "window": {
     "backgroundTextStyle": "light",
