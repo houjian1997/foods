@@ -1,0 +1,26 @@
+<!-- components/item/item.wxml -->
+<view class="img-view">
+    <image class="big-img" src="{{detail.albums}}" />
+</view>
+<view class="tags">
+    <view class="title">营养价值</view>
+    <view class="tags-view">{{detail.tags}}</view>
+</view>
+<view class="ingredients">
+    <view class="title">主要食材</view>
+    <view class="ingredients">{{detail.burden}}</view>
+</view>
+<view class="burden">
+    <view class="title">主要食材</view>
+    <view class="burden-view">{{detail.burden}}</view>
+</view>
+<view class="steps">
+    <view class="title">步骤</view>
+    <view wx:for="{{steps}}" wx:key="{{index}}" class="steps-view">
+        <image class="steps-img" src="{{item.img}}" />
+        <view>{{item.step}}</view>
+    </view>
+</view>
+<view class="btn-view">
+    <button type="warn" size="default" class="btn">加入到我的收藏</button>
+</view>

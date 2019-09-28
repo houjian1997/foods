@@ -5,14 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
+    names: [],
+  },
 
+  gotoDetail(e) {
+    console.log(e.currentTarget.dataset.name);
+    wx.navigateTo({
+      url:"../cookbooks/cookbooks?name=" + e.currentTarget.dataset.name
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    wx.request({
+      url: "http://localhost:1997/wechat/getCookBooksType",
+      header: {
+        "content-type": "application-json"
+      },
+      success(res) {
+        console.log(res);
+        that.setData({
+          names: res.data.result
+        })
+      }
+    })
   },
 
   /**

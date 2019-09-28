@@ -1,20 +1,13 @@
-// pages/home/home.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000,
-    foods: []
+    id: null,
+    detail: {},
+    steps: []
   },
 
   /**
@@ -22,16 +15,24 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    this.setData({
+      id: options.id
+    })
     wx.request({
-      url: 'http://localhost:1997/wechat/getFoods', //仅为示例，并非真实的接口地址
+      url: "http://localhost:1997/wechat/getCookBooksDetail",
+      data: {
+        id: this.data.id
+      },
       header: {
-        'content-type': 'application/json' // 默认值
+        "content-type": "application/json"
       },
       success(res) {
-        console.log(res);
+        console.log(res)
         that.setData({
-          foods: res.data.result
+          detail: res.data.result[0],
+          steps: res.data.result[0].steps
         })
+        console.log(that.data.steps);
         setTimeout(() => {
           wx.showToast({
             title: res.data.msg,

@@ -1,0 +1,11 @@
+<!-- components/list/list.wxml -->
+<view wx:for="{{foods}}" wx:key="{{index}}" class="food-dl" bindtap="gotoDetail" data-id="{{item.id}}">
+    <view class="food-dt">
+        <image class="food-img" src="{{item.albums[0]}}" lazy-load="false" binderror="" bindload="" />
+    </view>
+    <view class="food-dd">
+        <text class="title-text">{{item.title}}</text>
+        <text class="tags-text">{{item.tags}}</text>
+        <text class="ingredients-text">{{item.ingredients}}</text>
+    </view>
+</view>

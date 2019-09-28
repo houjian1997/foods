@@ -1,2 +1,12 @@
-<!--pages/classify/classify.wxml-->
-<text>pages/classify/classify.wxml</text>
+<!-- pages/classify/classify.wxml -->
+<view class="boss">
+    <view class="banner-view">
+        <image class="banner-img" src="../../images/banner.jpg" />
+    </view>
+    <view class="view">
+        <view wx:for="{{names}}" wx:key="{{index}}}" class="type-view" bindtap="gotoDetail" data-name="{{item}}">
+            <text class="">{{item}}</text>
+            <image class="icon-img" src="../../images/icon.png" />
+        </view>
+    </view>
+</view>

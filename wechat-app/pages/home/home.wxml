@@ -1,4 +1,5 @@
 <!-- pages/home/home.wxml -->
+<<<<<<< HEAD
 <view class="swiper-view">
     <swiper 
     indicator-dots="{{indicatorDots}}" 
@@ -14,3 +15,20 @@
         </block>
     </swiper>
 </view>
+=======
+<view>
+    <view class="swiper-view">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
+            <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" style="width:100%;height:300rpx" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="title-view">
+        <text class="title">本周精选</text>
+    </view>
+    <List foods="{{foods}}"></List>
+</view>
+>>>>>>> cf86e0d407ed12be5cf8bc1c86e8df4f12fe7bcb
